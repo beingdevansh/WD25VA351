@@ -1,4 +1,7 @@
-# WD25VA251-REACT
+# WD25VA351
+
+# Languages
+<img src="https://skillicons.dev/icons?i=html,js,nodejs,react" />
 
 ## 📘 Repository Overview
 
