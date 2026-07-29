@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            background-color: white;
+            width: 400px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        input {
+            width: 300px;
+            height: 45px;
+            font-size: 20px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 70px;
+            height: 50px;
+            font-size: 22px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+
+        <h2>Basic Calculator</h2>
+
+        <input type="number" id="num1" placeholder="First Number">
+        <br>
+
+        <input type="number" id="num2" placeholder="Second Number">
+        <br>
+
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+        <button onclick="mod()">%</button>
+        <button onclick="power()">xʸ</button>
+        <button onclick="sqrt()">√</button>
+
+        <h3 id="result">Result:</h3>
+
+    </div>
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a + b);
+        }
+
+        function sub() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a - b);
+        }
+
+        function mul() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a * b);
+        }
+
+        function div() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + ((a / b).toFixed(4));
+        }
+
+        function mod() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a % b);
+        }
+
+        function power() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a ** b);
+        }
+
+        function sqrt() {
+            let a = Number(document.getElementById("num1").value);
+            document.getElementById("result").innerHTML = "Result: " + Math.sqrt(a);
+        }
+    </script>
+
+</body>
+
+</html>
