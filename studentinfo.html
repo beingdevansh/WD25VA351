@@ -1,0 +1,62 @@
+< !DOCTYPE html>
+    <html>
+
+    <body>
+
+        <script>
+
+            function input() {
+                let name = prompt("Enter Name:");
+                let rollNo = prompt("Enter Roll No:");
+                let marks = [];
+
+                for (let i = 0; i < 5; i++) {
+                    marks[i] = Number(prompt("Enter marks of Subject " + (i + 1) + ":"));
+                }
+
+                return { name, rollNo, marks };
+            }
+
+            function calculateTotal(marks) {
+                let total = 0;
+
+                for (let i = 0; i < 5; i++)
+                    total += marks[i];
+
+                return total;
+            }
+
+            function calculatePercentage(total) {
+                return total / 5;
+            }
+
+            function calculateGrade(percentage) {
+                if (percentage >= 90) return "A";
+                else if (percentage >= 80) return "B";
+                else if (percentage >= 70) return "C";
+                else if (percentage >= 60) return "D";
+                else if (percentage >= 50) return "E";
+                else return "F";
+            }
+
+            function display(student, total, percentage, grade) {
+                document.write("<h2>Student Information</h2>");
+                document.write("Name: " + student.name + "<br>");
+                document.write("Roll No: " + student.rollNo + "<br>");
+                document.write("Total Marks: " + total + "/500<br>");
+                document.write("Percentage: " + percentage + "%<br>");
+                document.write("Grade: " + grade);
+            }
+
+            let student = input();
+            let total = calculateTotal(student.marks);
+            let percentage = calculatePercentage(total);
+            let grade = calculateGrade(percentage);
+
+            display(student, total, percentage, grade);
+
+        </script>
+
+    </body>
+
+    </html>

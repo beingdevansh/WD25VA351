@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>MOUSE FUNCTION</title>
+    <style>
+        .box-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        #box {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            border: 5px solid red;
+        }
+
+        #box2 {
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+            border: 5px solid green;
+        }
+
+        #box3 {
+            height: 300px;
+            width: 300px;
+            background-color: rebeccapurple;
+            border: 5px solid pink;
+        }
+
+        #box4 {
+            height: 300px;
+            width: 300px;
+            background-color: antiquewhite;
+            border: 5px solid black;
+        }
+    </style>
+    <script>
+        function eventCall() {
+            alert("These are the mouse events");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box-container">
+        <div id="box" onclick="eventCall()">
+            <center>onclick function</center>
+        </div>
+        <div id="box2" onmouseover="eventCall()">
+            <center>onmouseover function</center>
+        </div>
+
+        <div id="box3" onmouseup="eventCall()">
+            <center>onmouseup function</center>
+        </div>
+
+        <div id="box4" oncontextmenu="eventCall()">
+            <center>oncontextmenu function</center>
+        </div>
+    </div>
+
+</body>
+
+</html>
