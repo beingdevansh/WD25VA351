@@ -1,7 +1,7 @@
 # WD25VA351
 
 # Languages
-<img src="https://skillicons.dev/icons?i=html,js,nodejs,react" />
+<img src="https://skillicons.dev/icons?i=html,css,js,nodejs,react" />
 
 ## 📘 Repository Overview
 
