@@ -1,2 +1,0 @@
-Welcome to full stack development
-Semester:3
