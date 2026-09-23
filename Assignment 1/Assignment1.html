@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,244 +13,58 @@
     <div class="Quiz">
 
         <div id="studentSection">
-
             <h1>MID TERM-1 QUIZ</h1>
             <p>Enter your details</p>
 
-            <form id="StudentForm">
-
-                <label for="name">Name :</label>
+            <form id="studentForm">
+                <label for="name">Name:</label>
                 <input type="text" id="name" placeholder="Enter your Name" required>
 
-                <label for="admno">Admission No. :</label>
+                <label for="admno">Admission No.:</label>
                 <input type="text" id="admno" placeholder="Enter your Admission No." required>
 
-
-                <label>Branch :</label>
-
+                <label>Branch:</label>
                 <div class="radio-group">
-
-                    <label>
-                        <input type="radio" name="branch" value="CSE" required>
-                        CSE
-                    </label>
-
-                    <label>
-                        <input type="radio" name="branch" value="CSE DS">
-                        CSE DS
-                    </label>
-
-                    <label>
-                        <input type="radio" name="branch" value="AIML">
-                        AIML
-                    </label>
-
-                    <label>
-                        <input type="radio" name="branch" value="ECE">
-                        ECE
-                    </label>
-
-                    <label>
-                        <input type="radio" name="branch" value="ELCE">
-                        ELCE
-                    </label>
-
+                    <label><input type="radio" name="branch" value="CSE" required> CSE</label>
+                    <label><input type="radio" name="branch" value="CSE DS"> CSE DS</label>
+                    <label><input type="radio" name="branch" value="AIML"> AIML</label>
+                    <label><input type="radio" name="branch" value="ECE"> ECE</label>
+                    <label><input type="radio" name="branch" value="ELCE"> ELCE</label>
                 </div>
 
-
-                <label>Section :</label>
-
+                <label>Section:</label>
                 <div class="radio-group">
-
-                    <label>
-                        <input type="radio" name="section" value="A" required>
-                        A
-                    </label>
-
-                    <label>
-                        <input type="radio" name="section" value="B">
-                        B
-                    </label>
-
-                    <label>
-                        <input type="radio" name="section" value="C">
-                        C
-                    </label>
-
+                    <label><input type="radio" name="section" value="A" required> A</label>
+                    <label><input type="radio" name="section" value="B"> B</label>
+                    <label><input type="radio" name="section" value="C"> C</label>
                 </div>
-
 
                 <button type="submit">Start Quiz</button>
-
             </form>
-
         </div>
-
 
         <div id="quizSection">
-
-            <h1>Quiz</h1>
-
-
-            <div class="question">
-
-                <p>1. Which language is used to structure a web page?</p>
-
-                <label>
-                    <input type="radio" name="q1" value="HTML">
-                    HTML
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="CSS">
-                    CSS
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="Python">
-                    Python
-                </label>
-
-                <label>
-                    <input type="radio" name="q1" value="Java">
-                    Java
-                </label>
-
+            <div class="quiz-header">
+                <h1>Quiz</h1>
+                <div id="questionCounter">Question 1 of 5</div>
+                <div id="timer">01:00</div>
             </div>
 
+            <div id="questionContainer"></div>
 
-            <div class="question">
-
-                <p>2. Which language is used to style a web page?</p>
-
-                <label>
-                    <input type="radio" name="q2" value="HTML">
-                    HTML
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="CSS">
-                    CSS
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="C++">
-                    C++
-                </label>
-
-                <label>
-                    <input type="radio" name="q2" value="Java">
-                    Java
-                </label>
-
-            </div>
-
-
-            <div class="question">
-
-                <p>3. What does CPU stand for?</p>
-
-                <label>
-                    <input type="radio" name="q3" value="Central Processing Unit">
-                    Central Processing Unit
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="Computer Personal Unit">
-                    Computer Personal Unit
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="Central Program Unit">
-                    Central Program Unit
-                </label>
-
-                <label>
-                    <input type="radio" name="q3" value="Control Processing Unit">
-                    Control Processing Unit
-                </label>
-
-            </div>
-
-
-            <div class="question">
-
-                <p>4. Which of the following is an operating system?</p>
-
-                <label>
-                    <input type="radio" name="q4" value="Windows">
-                    Windows
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="Google">
-                    Google
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="Python">
-                    Python
-                </label>
-
-                <label>
-                    <input type="radio" name="q4" value="HTML">
-                    HTML
-                </label>
-
-            </div>
-
-
-            <div class="question">
-
-                <p>5. Which symbol is used for comments in C++?</p>
-
-                <label>
-                    <input type="radio" name="q5" value="//">
-                    //
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="##">
-                    ##
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="''' '''">
-                    ''' '''
-                </label>
-
-                <label>
-                    <input type="radio" name="q5" value="**">
-                    **
-                </label>
-
-            </div>
-
-
-            <button type="button" onclick="submitQuiz()">
-                Submit Quiz
-            </button>
-
+            <button type="button" id="nextButton">Next Question</button>
         </div>
 
-
         <div id="resultSection">
-
             <h1>Quiz Submitted</h1>
-
             <p id="studentName"></p>
-
             <h2 id="score"></h2>
-
-            <p id="message"></p>
-
+            <p id="message">Your quiz has been submitted successfully.</p>
         </div>
 
     </div>
 
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
